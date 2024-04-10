@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lin_body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="14.5dp"
+        android:paddingRight="14.5dp"
+        android:paddingBottom="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/lin_page_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_page_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineHeight="16dp"
+                android:text="@string/profilePage_heading_title"
+                android:textColor="@color/gray_primary"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_page_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lin_page_heading">
+
+            <LinearLayout
+                android:id="@+id/lin_profile_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="7.5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="7.5dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.025"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_avatar"
+                    app:shapeAppearanceOverlay="@style/avatarRounded" />
+
+                <LinearLayout
+                    android:id="@+id/lin_balance_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/lin_welcome_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_welcome_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:gravity="center_vertical"
+                            android:text="@string/profilePage_welcome_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_welcome_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:text="@string/profilePage_balance_hidden"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_balance_row"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_balance_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:fontFamily="@font/roboto_regular_400"
+                            android:text="@string/profilePage_balance_title"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_balance_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_medium_500"
+                            android:text="@string/profilePage_balance_value"
+                            android:textColor="@color/info_secondary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_hide"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_weight="0.05"
+                    android:src="@drawable/ic_eye_slash" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_logout_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logout_png_bg"
+            android:gravity="center_vertical"
+            android:onClick="goToMain"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="13dp"
+            android:paddingEnd="21dp"
+            android:paddingBottom="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_logout_icon"
+                android:layout_width="26dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                app:srcCompat="@drawable/ic_logout"
+                tools:srcCompat="@drawable/ic_logout" />
+
+            <TextView
+                android:id="@+id/btn_logout_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/profilePage_btn_logout"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/btn_logout_chevron"
+                android:layout_width="3.52dp"
+                android:layout_height="7.06dp"
+                android:layout_weight="0.01"
+                app:srcCompat="@drawable/ic_chevron"
+                tools:srcCompat="@drawable/ic_chevron" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

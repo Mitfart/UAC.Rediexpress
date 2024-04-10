@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textColorPrimary">@color/text_primary</item>
+
+        <item name="colorAccent">@color/accent_primary</item>
+        <item name="android:fontFamily">@font/roboto_medium_500</item>
+        <item name="fontStyle">normal</item>
+        <item name="android:fontStyle">normal</item>
+        <item name="fontWeight">500</item>
+        <item name="android:fontWeight">500</item>
+
+        <item name="editTextStyle">@style/editTextDefault</item>
+        <item name="android:editTextStyle">@style/editTextDefault</item>
+        <item name="materialButtonStyle">@style/buttonDefault</item>
+    </style>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+    <style name="editTextDefault" parent="Widget.AppCompat.EditText">
+        <item name="android:background">
+            @drawable/bordered_et_default
+        </item>
+        <item name="background">
+            @drawable/bordered_et_default
+        </item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="editTextError" parent="Widget.AppCompat.EditText">
+        <item name="android:background">
+            @drawable/bordered_et_error
+        </item>
+        <item name="background">
+            @drawable/bordered_et_error
+        </item>
+        <item name="android:textColor">@color/error_primary</item>
+        <item name="hintTextColor">@color/error_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="buttonDefault" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_button_selector</item>
+        <item name="background">@drawable/rounded_button_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/roboto_bold_700</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="avatarRounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

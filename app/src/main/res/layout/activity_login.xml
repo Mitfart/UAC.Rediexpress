@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white"
+    android:padding="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/lin_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_heading_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="30dp"
+                    android:text="@string/loginPage_heading_title"
+                    android:textFontWeight="500"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_heading_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loginPage_heading_subtitle"
+                    android:textColor="@color/gray_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_login_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/loginPage_login_title" />
+
+                <EditText
+                    android:id="@+id/et_login"
+                    style="@style/editTextDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:ems="10"
+                    android:hint="@string/loginPage_login_hint"
+                    android:inputType="text"
+                    android:text="fhorrod1" />
+
+                <TextView
+                    android:id="@+id/tv_login_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/loginPage_login_error"
+                    android:textColor="@color/error_primary"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_password_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/loginPage_password_title" />
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/et_password_wrapper"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_password"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:ems="10"-->
+<!--                        android:hint="@string/loginPage_password_hint"-->
+<!--                        android:inputType="textPassword" />-->
+<!--                    <androidx.appcompat.widget.AppCompatCheckBox-->
+<!--                        android:id="@+id/checkbox"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/ic_eye_selector"/>-->
+<!--                </LinearLayout>-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleDrawable="@drawable/ic_eye_selector"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/text_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:text="qT1@#HwB" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                                    <TextView
+                                        android:id="@+id/tv_password_error"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:text="@string/loginPage_password_error"
+                                        android:textColor="@color/error_primary"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:enabled="false"
+            android:onClick="logIn"
+            android:text="@string/loginPage_btn_login" />
+
+                        </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_to_main"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:onClick="goToProfile_TEST"
+        android:padding="0dp"
+        android:text="Главная"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

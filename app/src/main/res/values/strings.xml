@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">RediExpress</string>
+
+    <string name="loginPage_heading_title">Welcome</string>
+    <string name="loginPage_heading_subtitle">Fill in your login and password to continue</string>
+    <string name="loginPage_login_title">Login</string>
+    <string name="loginPage_login_hint">login</string>
+    <string name="loginPage_login_error">Field «Login» cannot be empty!</string>
+    <string name="loginPage_password_title">Password</string>
+    <string name="loginPage_password_hint">**********</string>
+    <string name="loginPage_password_error">Field «Password» cannot be empty!</string>
+    <string name="loginPage_btn_login">Log in</string>
+
+    <string name="profilePage_heading_title">Profile</string>
+    <string name="profilePage_welcome_text">Hello </string>
+    <string name="profilePage_balance_title">Current balance: </string>
+    <string name="profilePage_balance_value">N10,712:00</string>
+    <string name="profilePage_balance_hidden">***</string>
+    <string name="profilePage_btn_logout">Log out</string>
+</resources>
